@@ -21,6 +21,7 @@ jobs:
         python-version: [3.7]
         projects:
           - "projects/voltage"
+          - "projects/current"
 
     steps:
       - uses: actions/checkout@v2
