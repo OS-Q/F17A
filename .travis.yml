@@ -12,10 +12,10 @@ env:
 
 install:
   - pip install -U https://github.com/OS-Q/S03/archive/master.zip
-  - platformio platform install https://github.com/OS-Q/P12.git
+  - qio platform install https://github.com/OS-Q/P12.git
 
 script:
-  - platformio run -d $PLATFORMIO_PROJECT_DIR
+  - qio run -d $PLATFORMIO_PROJECT_DIR
 
 notifications:
   email: false
