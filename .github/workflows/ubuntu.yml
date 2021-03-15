@@ -24,6 +24,8 @@ jobs:
           - "projects/current"
           - "projects/battery"
           - "projects/sleep"
+          - "projects/dht11"
+          - "projects/clock"
 
     steps:
       - uses: actions/checkout@v2
