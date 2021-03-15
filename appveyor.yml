@@ -1,0 +1,22 @@
+build: off
+environment:
+
+  matrix:
+    - PLATFORMIO_PROJECT_DIR: "projects/voltage"
+    - PLATFORMIO_PROJECT_DIR: "projects/current"
+    - PLATFORMIO_PROJECT_DIR: "projects/battery"
+    - PLATFORMIO_PROJECT_DIR: "projects/sleep"
+    - PLATFORMIO_PROJECT_DIR: "projects/dht11"
+    - PLATFORMIO_PROJECT_DIR: "projects/clock"
+
+platform:
+  - x64
+
+install:
+- cmd: git submodule update --init --recursive
+- cmd: SET PATH=C:\Python37-x64;C:\Python37-x64\Scripts;%PATH%
+- cmd: pip3 install -U https://github.com/OS-Q/S03/archive/master.zip
+- cmd: platformio platform install https://github.com/OS-Q/P12.git
+
+script:
+- cmd: platformio run -d %PLATFORMIO_PROJECT_DIR%

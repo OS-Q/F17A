@@ -1,0 +1,22 @@
+language: python
+python:
+  - "3.7"
+
+env:
+  - PLATFORMIO_PROJECT_DIR=projects/voltage
+  - PLATFORMIO_PROJECT_DIR=projects/current
+  - PLATFORMIO_PROJECT_DIR=projects/battery
+  - PLATFORMIO_PROJECT_DIR=projects/sleep
+  - PLATFORMIO_PROJECT_DIR=projects/dht11
+  - PLATFORMIO_PROJECT_DIR=projects/clock
+
+install:
+  - pip install -U https://github.com/OS-Q/S03/archive/master.zip
+  - platformio platform install https://github.com/OS-Q/P12.git
+
+script:
+  - platformio run -d $PLATFORMIO_PROJECT_DIR
+
+notifications:
+  email: false
+
