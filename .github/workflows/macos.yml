@@ -22,6 +22,8 @@ jobs:
         projects:
           - "projects/voltage"
           - "projects/current"
+          - "projects/battery"
+          - "projects/sleep"
 
     steps:
       - uses: actions/checkout@v2
