@@ -1,0 +1,14 @@
+{
+  "name": "tool-agrv_jlink",
+  "version": "1.0.0",
+  "description": "Software and Documentation Pack for SEGGER J-Link debug probes",
+  "keywords": [
+    "tools",
+    "debugger",
+    "debug server",
+    "uploader"
+  ],
+  "system": [
+    "windows_amd64"
+  ]
+}
